@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: rgb(68, 68, 67);
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.historyHeader {
+  display: flex;
+  gap: 20px;
+  color: aliceblue;
+}
+
+.historyHeaderDate {
+  flex-basis: 200px;
+}
+
+.historyHeaderDistance {
+  flex-basis: 200px;
+}

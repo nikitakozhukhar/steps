@@ -1,0 +1,60 @@
+.historyContainerList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 5px 5px 5px;
+  /* background-color: rgb(68, 68, 67); */
+  color: aliceblue;
+}
+
+.historyContainerListItem {
+  display: flex;
+  gap: 20px;
+}
+
+.historyDate,
+.historyDistance {
+  
+  flex-basis: 200px;
+}
+
+.historyButtonChange,
+.historyButtonDelete {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.historyButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.historyButton {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.historyButtonChange::before {
+  content: '\270E';
+  color: rgba(255, 255, 0, 0.4);
+  
+}
+
+.historyButtonDelete::before {
+  content: '\2718';
+  color: rgba(255, 0, 0, 0.4);
+}
+
+.historyButtonChange:hover::before {
+  color: yellow;
+}
+
+.historyButtonDelete:hover::before {
+  color: red;
+}
+
