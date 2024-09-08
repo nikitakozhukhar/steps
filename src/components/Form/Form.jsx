@@ -1,7 +1,7 @@
 import styles from "../Form/form.module.css";
 
-const regDate = /^\d{2}\.\d{2}\.\d{4}$/;
-const regDistance = /^\d+\.?\d*$/;
+
+
 
 
 export default function Form({form, setForm, addHistory}) {
@@ -15,8 +15,8 @@ export default function Form({form, setForm, addHistory}) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!regDate.test(form.date) || !regDistance.test(form.distance)) return;
-
+    if (form.distance < 0) return;
+    
     addHistory({...form})
 
     setForm({ date: "", distance: "" });
@@ -29,6 +29,7 @@ export default function Form({form, setForm, addHistory}) {
               <div className={styles.formDate}>
                   <label htmlFor="date">Дата (дд.мм.гггг)</label>
                   <input
+                      type="date"
                       className={styles.inputDate}
                       name={"date"}
                       value={form.date}
@@ -40,6 +41,7 @@ export default function Form({form, setForm, addHistory}) {
               <div className={styles.formDistance}>
                   <label>Пройдено км</label>
                   <input
+                      type="number"
                       className={styles.inputDistance}
                       name={"distance"}
                       value={form.distance}
